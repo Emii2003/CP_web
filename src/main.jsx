@@ -1,24 +1,26 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from './App.jsx'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Home from './routes/Home/index.jsx'
 import Produtos from './routes/Produtos/index.jsx'
 import EditarProdutos from './routes/EditarProdutos/index.jsx'
 import Error from './routes/Error/index.jsx'
-import { Children } from "react";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
     errorElement: <Error/>,
-    Children[
+    Children:[
       {
-        path:"/home",
-        element:<home/>,
+        path:"/",
+        element:<Home/>,
       },
       {
         path:"/produtos",
-        element:<produtos/>,
-      }
+        element:<Produtos/>,
+      },
       {
         path:"/produtos/editar/:id",
         element:<EditarProdutos/>,
@@ -27,8 +29,8 @@ const router = createBrowserRouter([
   }
 ])
 
-//  ReactDOM.createRoot(document.getElementById('root')).render(
-//    <React.StrictMode>
-//      <App />
-//    </React.StrictMode>,
-//  )
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router}/>
+  </React.StrictMode>,
+)
