@@ -41,11 +41,14 @@
   color: #888;
 }
 
+*{
+  font-family: verdana;
+}
+
 nav{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: verdana;
 }
 
 main{
@@ -53,4 +56,8 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+main h1{
+  font-size: 4rem;
 }
