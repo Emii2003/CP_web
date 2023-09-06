@@ -45,6 +45,10 @@
   font-family: verdana;
 }
 
+body{
+  background-color: #344e41;
+}
+
 nav{
   display: flex;
   justify-content: center;
@@ -60,4 +64,6 @@ main{
 
 main h1{
   font-size: 4rem;
+  color: white;
 }
+
